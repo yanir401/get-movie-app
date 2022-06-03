@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 0 1rem;
+  flex-wrap: wrap;
 }
 .subNavbar li {
   padding: 1rem 0;
@@ -21,4 +22,10 @@
 }
 /* .subNavbar a:hover {
   background-color: rgba(255, 255, 255, 0.705);
+} */
+/* 
+@media (max-width: 1300px) {
+  body {
+    background-color: blue;
+  }
 } */
