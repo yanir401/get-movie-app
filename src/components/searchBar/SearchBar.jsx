@@ -19,7 +19,7 @@ const SearchBar = () => {
       return () => {
         clearTimeout(timeOutId);
       };
-    } else setSearchResults([""]);
+    } else setSearchResults();
   }, [inputValue]);
 
   const renderResults = () => {
