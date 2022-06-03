@@ -1,0 +1,35 @@
+.search-bar {
+  max-width: 100%;
+}
+.search-bar input {
+  padding: 0.65rem 2rem;
+}
+.search-bar .result-scroll {
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.745);
+  position: absolute;
+  max-height: 40%;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  max-width: 100%;
+  margin-right: 2rem;
+}
+.search-bar .scroll-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  /* max-width: 50%; */
+}
+.scroll-item .movie-result-title {
+  font-size: 1.1rem;
+  margin: 3px 0;
+}
+.scroll-item img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  max-width: 100px;
+}
