@@ -4,7 +4,7 @@ import { searchMovie } from "../../api/movieDb/movieDb";
 import "./searchBar.css";
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState();
 
   const searchForMovie = async () => {
     const results = await searchMovie(inputValue);
@@ -19,10 +19,9 @@ const SearchBar = () => {
       return () => {
         clearTimeout(timeOutId);
       };
-    }
-    // else setSearchResults();
-  }, []);
-  // inputValue
+    } else setSearchResults();
+  }, [inputValue]);
+
   const renderResults = () => {
     return searchResults.map((movie) => {
       return (
