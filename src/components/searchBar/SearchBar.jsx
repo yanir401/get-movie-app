@@ -48,6 +48,7 @@ const SearchBar = () => {
     <div className="search-bar">
       <input
         type="text"
+        className="input-search"
         onChange={({ target: { value } }) => setInputValue(value)}
       />
       <div className="result-scroll">{searchResults && renderResults()}</div>
