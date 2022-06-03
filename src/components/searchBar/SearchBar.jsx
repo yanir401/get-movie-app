@@ -12,7 +12,6 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    console.log("i run");
     if (inputValue.length >= 1) {
       const timeOutId = setTimeout(() => {
         searchForMovie();
@@ -20,8 +19,8 @@ const SearchBar = () => {
       return () => {
         clearTimeout(timeOutId);
       };
-    } else setSearchResults([]);
-  }, [inputValue, searchForMovie]);
+    } else setSearchResults([""]);
+  }, [inputValue]);
 
   const renderResults = () => {
     return searchResults.map((movie) => {
