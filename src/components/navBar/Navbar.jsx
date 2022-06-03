@@ -3,7 +3,7 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <h2>
-      <span>G</span>et
+      <span className="white-letter">G</span>et
       <span>M</span>
       ovie
     </h2>

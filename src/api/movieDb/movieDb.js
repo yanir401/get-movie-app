@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "?api_key=9347d37f128e9d7f9f301986f52e323b";
+const API_KEY = process.env.REACT_APP_MOVIEDB_KEY;
 
 export const getPopularMovies = async () => {
   try {
