@@ -21,8 +21,8 @@ const SearchBar = () => {
       };
     }
     // else setSearchResults();
-  }, [inputValue]);
-
+  }, []);
+  // inputValue
   const renderResults = () => {
     return searchResults.map((movie) => {
       return (
