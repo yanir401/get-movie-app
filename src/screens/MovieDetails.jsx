@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ListItem from "../components/list/ListItem";
+// import { Link } from "react-router-dom";
+// import ListItem from "../components/list/ListItem";
 
 const MovieDetails = ({ history, location: { movie } }) => {
   console.log(history, movie);

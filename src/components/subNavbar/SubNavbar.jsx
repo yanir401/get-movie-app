@@ -6,7 +6,7 @@ const SubNavbar = ({ genres }) => {
       {genres.map((genre) => {
         return (
           <li>
-            <a className="btn" key={genre.id}>
+            <a className="btn" key={genre.id} href="#">
               {genre.name}
             </a>
           </li>

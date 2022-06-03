@@ -1,6 +1,5 @@
 import React from "react";
 import "./listItem.css";
-import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const ListItem = ({ movie }) => {

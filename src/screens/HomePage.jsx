@@ -5,11 +5,11 @@ import {
   getPopularMovies,
   getUpComingMovies,
   getMovieGenres,
-  searchMovie,
+  // searchMovie,
 } from "../api/movieDb/movieDb";
 import Main from "../layout/main/Main";
-import SearchBar from "../components/searchBar/SearchBar";
-import SubNavbar from "../components/subNavbar/SubNavbar";
+// import SearchBar from "../components/searchBar/SearchBar";
+// import SubNavbar from "../components/subNavbar/SubNavbar";
 
 export default function HomePage() {
   const [movies, setMovies] = useState();
@@ -39,7 +39,6 @@ export default function HomePage() {
     <div>
       {movies && (
         <>
-          {" "}
           <Header genres={genres} />
           <div className="container">
             <Main movies={movies} title={"Popular Movies"} />
