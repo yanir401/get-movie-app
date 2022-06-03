@@ -6,9 +6,9 @@ const SubNavbar = ({ genres }) => {
       {genres.map((genre) => {
         return (
           <li>
-            <button className="btn" key={genre.id} href="#">
+            <a className="btn" key={genre.id} href="https://www.google.com/">
               {genre.name}
-            </button>
+            </a>
           </li>
         ); // Add fetch movies by genre
       })}
