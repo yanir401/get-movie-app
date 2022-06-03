@@ -21,7 +21,7 @@ const SearchBar = () => {
         clearTimeout(timeOutId);
       };
     } else setSearchResults([]);
-  }, [inputValue]);
+  }, [inputValue, searchForMovie]);
 
   const renderResults = () => {
     return searchResults.map((movie) => {
@@ -35,7 +35,6 @@ const SearchBar = () => {
             }}
           >
             <p className="movie-result-title"> {movie.original_title}</p>
-
             <img
               src={` https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt=""
