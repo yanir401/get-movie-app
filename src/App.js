@@ -1,6 +1,6 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./screens/HomePage";
-import MovieDetails from "./screens/MovieDetails";
+import MovieDetails from "./screens/movieDetails/MovieDetails";
 
 function App() {
   return (
