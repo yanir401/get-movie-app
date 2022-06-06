@@ -36,7 +36,6 @@ export const getMovieGenres = async () => {
   }
 };
 export const searchMovie = async (query) => {
-  console.log("searching");
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/search/movie${API_KEY}&query=${query}`
@@ -47,5 +46,14 @@ export const searchMovie = async (query) => {
   }
 };
 
-// export { getPopularMovies, getMovieGenres };
-// export default getMovieGenres;
+export const fetchSelectedMovie = async (id) => {
+  try {
+    const response = await axios.get(
+      ` https://api.themoviedb.org/3/movie/${id}${API_KEY}&append_to_response=videos,images`
+    );
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

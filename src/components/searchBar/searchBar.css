@@ -3,6 +3,7 @@
 }
 .search-bar .input-search {
   padding: 0.65rem 2rem;
+  text-align: left;
 }
 .search-bar .result-scroll {
   overflow: hidden;
@@ -20,6 +21,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  max-width: 100%;
   margin-bottom: 1rem;
   /* max-width: 50%; */
 }
