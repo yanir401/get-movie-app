@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { searchMovie } from "../../api/movieDb/movieDb";
+import { setSelectedMovieStorage } from "../../localStorage/movieStorage";
+
 import "./searchBar.css";
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
@@ -27,9 +29,12 @@ const SearchBar = () => {
       return (
         <>
           <Link
+            onClick={() => {
+              setSelectedMovieStorage(movie);
+            }}
             className="scroll-item"
             to={{
-              pathname: `/movie:${movie.id}`,
+              pathname: `/movie/${movie.id}`,
               movie: movie,
             }}
           >

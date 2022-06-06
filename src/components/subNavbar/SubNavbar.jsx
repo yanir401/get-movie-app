@@ -5,8 +5,8 @@ const SubNavbar = ({ genres }) => {
     <ul className="subNavbar">
       {genres.map((genre) => {
         return (
-          <li>
-            <a className="btn" key={genre.id} href="https://www.google.com/">
+          <li key={genre.id}>
+            <a className="btn" href="https://www.google.com/">
               {genre.name}
             </a>
           </li>
