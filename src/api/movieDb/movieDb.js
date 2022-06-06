@@ -49,7 +49,7 @@ export const searchMovie = async (query) => {
 export const fetchSelectedMovie = async (id) => {
   try {
     const response = await axios.get(
-      ` https://api.themoviedb.org/3/movie/${id}${API_KEY}&append_to_response=videos,images`
+      ` https://api.themoviedb.org/3/movie/${id}${API_KEY}&append_to_response=videos`
     );
 
     return response.data;
