@@ -5,7 +5,11 @@ const Main = ({ movies, title }) => {
   return (
     <div className="main">
       <h2 className="movie-list-title">{title.toUpperCase()}</h2>
-      <RenderList movies={movies} />
+      {movies ? (
+        <RenderList movies={movies} />
+      ) : (
+        <h2 style={{ color: "white" }}>Loading</h2>
+      )}
     </div>
   );
 };

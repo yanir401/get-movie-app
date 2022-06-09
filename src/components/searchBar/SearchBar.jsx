@@ -52,6 +52,7 @@ const SearchBar = () => {
   return (
     <div className="search-bar">
       <input
+        placeholder="Search Movie..."
         type="text"
         className="input-search"
         onChange={({ target: { value } }) => setInputValue(value)}

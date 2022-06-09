@@ -6,6 +6,7 @@
 body {
   background-color: #171717;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -29,7 +30,19 @@ a {
   cursor: pointer;
   border: none;
   padding: 0.5rem 1rem;
+
   /* background-color: aliceblue; */
+}
+.btn-outline {
+  /* border: 1px solid #e6d5b8; */
+  color: #fff;
+  background-color: #f2652a;
+}
+
+.btn-grey {
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 .container {

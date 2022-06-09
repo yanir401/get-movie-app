@@ -1,7 +1,18 @@
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   color: #fff;
+  /* background-color: aqua; */
+}
+
+.logo .current-user {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  font-size: 1.4rem;
+  width: 70%;
 }

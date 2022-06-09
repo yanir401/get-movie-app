@@ -5,6 +5,7 @@ export const SelectedMovieContext = createContext();
 const SelectedMovieProvider = ({ children }) => {
   const [selectedMovie, setSelectedMovie] = useState();
   const [contextMovies, setContextMovies] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState();
   return (
     <SelectedMovieContext.Provider
       value={{
@@ -12,6 +13,8 @@ const SelectedMovieProvider = ({ children }) => {
         setSelectedMovie,
         contextMovies,
         setContextMovies,
+        selectedGenre,
+        setSelectedGenre,
       }}
     >
       {children}
