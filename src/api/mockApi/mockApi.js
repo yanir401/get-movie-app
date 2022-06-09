@@ -44,7 +44,6 @@ export const addToUserWatchList = async (email, movie) => {
       return userMovie.id === movie.id;
     });
     if (!isMovieExists) userWatchList.push(movie);
-    // console.log(user);
     const response = await mockApi.put(`/movieAppUsers/${user.id}`, {
       watchList: userWatchList,
     });

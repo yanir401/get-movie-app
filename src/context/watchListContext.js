@@ -18,7 +18,6 @@ const WatchListProvider = ({ children }) => {
       if (!isExists) {
         setStorageWatchList([...storageWatchList, movie]);
       }
-      console.log(storageWatchList.length);
     }
     dispatch({
       type: "ADD_TO_WATCH_LIST",

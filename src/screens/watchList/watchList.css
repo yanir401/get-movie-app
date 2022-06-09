@@ -8,10 +8,25 @@
   height: 100vh;
   background: no-repeat top center/cover;
 }
+.play-list::-webkit-scrollbar {
+  width: 1em;
+}
+
+.play-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.play-list::-webkit-scrollbar-thumb {
+  background-color: rgb(79, 79, 79);
+  outline: 1px solid rgb(80, 87, 96);
+}
+
 .back-btn {
   /* align-self: center; */
   position: absolute;
   top: 75%;
+  background-color: #fff;
+  font-size: 1.35rem;
   /* margin: 0 auto; */
   /* display: block; */
 }
