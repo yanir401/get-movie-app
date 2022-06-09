@@ -1,0 +1,26 @@
+.watch-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  color: #fff;
+
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.watch-list .num-of-watchList-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.watch-list .num-of-watchList {
+  position: absolute;
+
+  /* margin-left: 1px; */
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #000;
+}

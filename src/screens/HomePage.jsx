@@ -5,6 +5,7 @@ import {
   getPopularMovies,
   getUpComingMovies,
   getMovieGenres,
+  getMovieByGenres,
   // searchMovie,
 } from "../api/movieDb/movieDb";
 import Main from "../layout/main/Main";
@@ -16,10 +17,15 @@ import {
   setUpComingMoviesLocal,
 } from "../localStorage/movieStorage";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import GoogleSignIn from "./signIn/GoogleSignIn";
+import { UserContext } from "../context/userContext";
 
 export default function HomePage() {
   const [movies, setMovies] = useState();
   const [genres, setGenres] = useState();
+  const { user } = useContext(UserContext);
+  const { selectedGenre, setSelectedGenre } = useContext(SelectedMovieContext);
+  const [moviesGenres, setMoviesGenres] = useState([]);
   const [upComingMovie, setUpComingMovie] = useState([]);
   const { contextMovies, setContextMovies } = useContext(SelectedMovieContext);
   const [popularMoviesLocalStorage, setPopularMoviesLocalStorage] =
@@ -38,6 +44,7 @@ export default function HomePage() {
     const getGenres = async () => {
       const data = await getMovieGenres();
       setGenres(data);
+      console.log(data);
     };
     const getUpComing = async () => {
       const data = await getUpComingMovies();
@@ -52,16 +59,36 @@ export default function HomePage() {
     getGenres();
   }, []);
 
+  useEffect(() => {
+    const moviesByGenres = async () => {
+      if (selectedGenre) {
+        const movies = await getMovieByGenres(selectedGenre.id);
+        console.log(movies);
+
+        setMoviesGenres(movies);
+      }
+    };
+    moviesByGenres();
+  }, [selectedGenre]);
+
   return (
     <div>
       {movies && (
         <>
           <Header genres={genres} />
           <div className="container">
-            <Main movies={movies} title={"Popular Movies"} />
-            <Main movies={upComingMovie} title={"Up Coming Movies"} />
+            {!selectedGenre ? (
+              <>
+                {" "}
+                <Main movies={movies} title={"Popular Movies"} />
+                <Main movies={upComingMovie} title={"Up Coming Movies"} />{" "}
+              </>
+            ) : (
+              <Main movies={moviesGenres} title={selectedGenre.name} />
+            )}
           </div>
-          <Footer />
+          {/* <Footer /> */}
+          {/* <GoogleSignIn /> */}
         </>
       )}
     </div>

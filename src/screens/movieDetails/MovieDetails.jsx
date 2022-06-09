@@ -2,15 +2,22 @@ import React, { useContext, useEffect, useState } from "react";
 import "./movieDetails.css";
 import { SelectedMovieContext } from "../../context/moviesContext";
 import { fetchSelectedMovie } from "../../api/movieDb/movieDb";
+import {
+  useLocation,
+  useMatch,
+  useParams,
+  useNavigate,
+} from "react-router-dom";
 
 const MovieDetails = ({ match, history }) => {
   const [movie, setMovie] = useState();
   const [officialTrailer, setOfficialTrailer] = useState();
   const [showTrailer, setShowTrailer] = useState(false);
-
+  const { id } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     const getMovie = async () => {
-      const movie = await fetchSelectedMovie(match.params.id);
+      const movie = await fetchSelectedMovie(id);
       setMovie(movie);
       const getOfficialTrailer = movie.videos.results.find((video) => {
         return video.name.includes("fficial") || video;
@@ -47,14 +54,17 @@ const MovieDetails = ({ match, history }) => {
                     allowFullScreen
                     title="Embedded youtube"
                   />
-                  <button className="btn" onClick={toggleShowTrailer}>
+                  <button className="btn btn-grey" onClick={toggleShowTrailer}>
                     Close
                   </button>
                 </div>
               ) : (
                 <>
                   {officialTrailer && (
-                    <button className="btn" onClick={toggleShowTrailer}>
+                    <button
+                      className="btn btn-outline trailer"
+                      onClick={toggleShowTrailer}
+                    >
                       Watch Trailer
                     </button>
                   )}
@@ -62,7 +72,10 @@ const MovieDetails = ({ match, history }) => {
                     <h2>{movie.original_title}</h2>
                     <p>{movie.overview}</p>
                     <h4>{movie.vote_average}</h4>
-                    <button className="btn" onClick={() => history.goBack()}>
+                    <button
+                      className="btn btn-grey"
+                      onClick={() => navigate(-1)}
+                    >
                       Back
                     </button>
                   </div>

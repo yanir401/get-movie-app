@@ -35,6 +35,18 @@ export const getMovieGenres = async () => {
     console.log(error);
   }
 };
+export const getMovieByGenres = async (listId) => {
+  console.log(listId);
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/list/${listId}${API_KEY}`
+    );
+    return response.data.items;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const searchMovie = async (query) => {
   try {
     const response = await axios.get(
