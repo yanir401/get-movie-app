@@ -44,7 +44,6 @@ export default function HomePage() {
     const getGenres = async () => {
       const data = await getMovieGenres();
       setGenres(data);
-      console.log(data);
     };
     const getUpComing = async () => {
       const data = await getUpComingMovies();
@@ -63,7 +62,6 @@ export default function HomePage() {
     const moviesByGenres = async () => {
       if (selectedGenre) {
         const movies = await getMovieByGenres(selectedGenre.id);
-        console.log(movies);
 
         setMoviesGenres(movies);
       }

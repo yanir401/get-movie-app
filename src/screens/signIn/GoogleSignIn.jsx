@@ -12,7 +12,7 @@ const GoogleSignIn = () => {
   const [userAuth, setUserAuth] = useLocalStorage("userAuth", "");
   const handleCallBackResponse = async (response) => {
     const userObj = jwt_decode(response.credential);
-    console.log("Login success current user: ", userObj);
+    // console.log("Login success current user: ", userObj);
     setUserAuth(userObj);
     setUser(userObj);
     const users = await fetchAllUsers();

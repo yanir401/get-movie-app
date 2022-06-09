@@ -76,7 +76,7 @@ const PrivateRoute = () => {
       setTimeout(() => {
         window.google.accounts.id.initialize({
           client_id: clientId,
-          auto_select: true,
+          // auto_select: true,
 
           callback: handleCallBackResponse,
         });

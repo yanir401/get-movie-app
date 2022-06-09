@@ -23,7 +23,6 @@ const ListItem = ({ movie }) => {
     useState("Add To Watchlist");
 
   const addToWatchListAPI = async (movie) => {
-    console.log(movie, user.email);
     const response = await addToUserWatchList(user.email, movie);
   };
   const addToWatchList = () => {
