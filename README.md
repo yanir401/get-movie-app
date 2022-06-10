@@ -2,11 +2,17 @@
 
 ## Summary
 
-As part of Appleseeds full-stack Bootcamp, We asked to build our own mid project 
-I build GETMOVIE that allow user to looking for movies and add the thriller to own watchlist
+As part of Appleseeds full-stack Bootcamp, We asked to build our own mid-project.
+I built GETMOVIE which allow the user to look for movies and add the trailer to their own watchlist.
  
-### Technologies:
+## In this porject I used :
 
-**React
-**REST API
+ * React 
+ * API 
+ * HTTP Request With axios
+ * React Router
+ * Protect route
+ * Google Identity Services
 
+### `Live Demo`
+[GETMOVIE]([https://github.com/user/repo/blob/branch/other_file.md](https://movie-app-yanir.netlify.app/))
