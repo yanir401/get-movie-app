@@ -15,4 +15,4 @@ I built GETMOVIE which allow the user to look for movies and add the trailer to 
  * Google Identity Services
 
 ### `Live Demo`
-[GETMOVIE]([https://github.com/user/repo/blob/branch/other_file.md](https://movie-app-yanir.netlify.app/))
+[GETMOVIE](https://movie-app-yanir.netlify.app/)
