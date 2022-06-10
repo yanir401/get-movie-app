@@ -3,6 +3,7 @@
 ## Summary
 
 As part of Appleseeds full-stack Bootcamp, We asked to build our own mid-project.
+
 I built GETMOVIE which allow the user to look for movies and add the trailer to their own watchlist.
  
 ## In this porject I used :
